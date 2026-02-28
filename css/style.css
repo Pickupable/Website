@@ -1,0 +1,329 @@
+/* ============================================================
+   Glasgow Financial Advice — Main Stylesheet
+   Colours: Teal #135454 | Grey #636262 | Cream #f5f0e8
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f0e8;
+    color: #2a2a2a;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #135454;
+    letter-spacing: 0.02em;
+}
+
+h1 { font-size: 2.8rem; line-height: 1.2; }
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+
+p { margin-bottom: 1.2rem; color: #2a2a2a; }
+
+a {
+    color: #135454;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover { color: #c9a84c; }
+
+/* --- Ornamental Divider --- */
+.ornament {
+    text-align: center;
+    color: #c9a84c;
+    font-size: 1.4rem;
+    letter-spacing: 0.4em;
+    margin: 1.5rem 0;
+    display: block;
+}
+
+.rule {
+    border: none;
+    border-top: 1px solid #c9a84c;
+    width: 60%;
+    margin: 0.5rem auto;
+}
+
+/* --- Header / Navigation --- */
+header {
+    background-color: #135454;
+    border-bottom: 4px solid #c9a84c;
+    padding: 0;
+}
+
+.header-top {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    background-color: #135454;
+}
+
+.crest {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.firm-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #f5f0e8;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.strapline {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: #c9a84c;
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+    margin-top: 0.3rem;
+}
+
+nav {
+    background-color: #0e3d3d;
+    border-top: 1px solid #c9a84c;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: #f5f0e8;
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.9rem 1.6rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #135454;
+    color: #c9a84c;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: #135454;
+    color: #f5f0e8;
+    text-align: center;
+    padding: 5rem 2rem;
+    border-bottom: 4px solid #c9a84c;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(201,168,76,0.03) 40px,
+        rgba(201,168,76,0.03) 80px
+    );
+}
+
+.hero h1 {
+    color: #f5f0e8;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.hero p {
+    color: #c9a9a9;
+    font-size: 1.2rem;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    position: relative;
+    color: rgba(245,240,232,0.85);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #c9a84c;
+    color: #135454;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.8rem 2.2rem;
+    border: 2px solid #c9a84c;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    position: relative;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #c9a84c;
+}
+
+/* --- Main Content --- */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Card Grid --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #c9a84c;
+    border-top: 4px solid #135454;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card h3 { color: #135454; }
+
+.card p { font-size: 0.95rem; color: #636262; }
+
+/* --- Decorative border box --- */
+.bordered-box {
+    border: 1px solid #c9a84c;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.bordered-box::before,
+.bordered-box::after {
+    content: '✦';
+    color: #c9a84c;
+    position: absolute;
+    font-size: 0.8rem;
+}
+
+.bordered-box::before { top: -0.6rem; left: 50%; transform: translateX(-50%); background: #f5f0e8; padding: 0 0.5rem; }
+.bordered-box::after { bottom: -0.6rem; left: 50%; transform: translateX(-50%); background: #f5f0e8; padding: 0 0.5rem; }
+
+/* --- Form Styles --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: #135454;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.03em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #636262;
+    background-color: #fff;
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    color: #2a2a2a;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #135454;
+}
+
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.form-note {
+    font-size: 0.85rem;
+    color: #636262;
+    font-style: italic;
+    margin-top: 0.3rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0e3d3d;
+    border-top: 4px solid #c9a84c;
+    color: rgba(245,240,232,0.7);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-size: 0.88rem;
+}
+
+footer a { color: #c9a84c; }
+footer a:hover { color: #f5f0e8; }
+
+.footer-firm {
+    font-family: 'Playfair Display', serif;
+    color: #f5f0e8;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.footer-legal {
+    margin-top: 1rem;
+    font-size: 0.78rem;
+    color: rgba(245,240,232,0.5);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+    h1 { font-size: 2rem; }
+    .hero h1 { font-size: 2.2rem; }
+    .firm-name { font-size: 1.6rem; }
+    nav ul li a { padding: 0.7rem 1rem; font-size: 0.9rem; }
+}

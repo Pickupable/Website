@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Portal — Glasgow Financial Advice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <img src="images/crest-placeholder.svg" alt="Glasgow Financial Advice Crest" class="crest">
+            <div class="firm-name">Glasgow Financial Advice</div>
+            <div class="strapline">Financial Advice for Glasgow</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="kyc.html" class="active">Client Portal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="section">
+            <span class="ornament">— ✦ —</span>
+            <h2 class="section-title">Client Assessment Questionnaire</h2>
+            <hr class="rule">
+            <p style="text-align:center; margin-top:1rem; color:#636262; font-style:italic;">
+                Please complete the following questionnaire as fully and accurately as possible. All information is treated in strict confidence.
+            </p>
+        </div>
+
+        <form id="kyc-form" class="section">
+
+            <!-- Section 1: Personal Details -->
+            <div class="bordered-box">
+                <h3>Section 1 — Personal Details</h3>
+                <br>
+                <div class="form-group">
+                    <label for="full-name">Full Name *</label>
+                    <input type="text" id="full-name" name="full_name" required placeholder="e.g. James Alexander Mackenzie">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="date_of_birth" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telephone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. 0141 000 0000">
+                </div>
+                <div class="form-group">
+                    <label for="address">Home Address *</label>
+                    <textarea id="address" name="address" required placeholder="Street, City, Postcode"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="marital-status">Marital Status</label>
+                    <select id="marital-status" name="marital_status">
+                        <option value="">— Please select —</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married / Civil Partnership</option>
+                        <option value="divorced">Divorced / Separated</option>
+                        <option value="widowed">Widowed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dependants">Number of Financial Dependants</label>
+                    <select id="dependants" name="dependants">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4+">4 or more</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section 2: Financial Situation -->
+            <div class="bordered-box">
+                <h3>Section 2 — Financial Situation</h3>
+                <br>
+                <div class="form-group">
+                    <label for="employment">Employment Status *</label>
+                    <select id="employment" name="employment_status" required>
+                        <option value="">— Please select —</option>
+                        <option value="employed">Employed</option>
+                        <option value="self-employed">Self-Employed</option>
+                        <option value="retired">Retired</option>
+                        <option value="not-working">Not Currently Working</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="income">Annual Gross Income (£) *</label>
+                    <select id="income" name="annual_income" required>
+                        <option value="">— Please select —</option>
+                        <option value="under-20k">Under £20,000</option>
+                        <option value="20k-40k">£20,000 – £40,000</option>
+                        <option value="40k-60k">£40,000 – £60,000</option>
+                        <option value="60k-100k">£60,000 – £100,000</option>
+                        <option value="over-100k">Over £100,000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="savings">Approximate Total Savings & Investments (£)</label>
+                    <select id="savings" name="total_savings">
+                        <option value="">— Please select —</option>
+                        <option value="under-10k">Under £10,000</option>
+                        <option value="10k-50k">£10,000 – £50,000</option>
+                        <option value="50k-150k">£50,000 – £150,000</option>
+                        <option value="150k-500k">£150,000 – £500,000</option>
+                        <option value="over-500k">Over £500,000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="amount-invest">Amount You Wish to Invest (£) *</label>
+                    <input type="number" id="amount-invest" name="amount_to_invest" required min="0" placeholder="e.g. 10000">
+                </div>
+                <div class="form-group">
+                    <label for="monthly-contrib">Monthly Contribution (£, if applicable)</label>
+                    <input type="number" id="monthly-contrib" name="monthly_contribution" min="0" placeholder="e.g. 200">
+                </div>
+            </div>
+
+            <!-- Section 3: Investment Objectives -->
+            <div class="bordered-box">
+                <h3>Section 3 — Investment Objectives</h3>
+                <br>
+                <div class="form-group">
+                    <label for="objective">Primary Investment Objective *</label>
+                    <select id="objective" name="investment_objective" required>
+                        <option value="">— Please select —</option>
+                        <option value="growth">Capital Growth</option>
+                        <option value="income">Regular Income</option>
+                        <option value="balanced">Balanced Growth & Income</option>
+                        <option value="preservation">Capital Preservation</option>
+                        <option value="education">Education Fund (children)</option>
+                        <option value="retirement">Retirement Planning</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time-horizon">Investment Time Horizon *</label>
+                    <select id="time-horizon" name="time_horizon" required>
+                        <option value="">— Please select —</option>
+                        <option value="under-3">Less than 3 years</option>
+                        <option value="3-5">3 – 5 years</option>
+                        <option value="5-10">5 – 10 years</option>
+                        <option value="over-10">More than 10 years</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="income-required">Do you require income from this investment?</label>
+                    <select id="income-required" name="income_required">
+                        <option value="no">No</option>
+                        <option value="yes-regular">Yes — regular withdrawals</option>
+                        <option value="yes-occasional">Yes — occasional withdrawals</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section 4: Risk Profile -->
+            <div class="bordered-box">
+                <h3>Section 4 — Attitude to Risk</h3>
+                <br>
+                <div class="form-group">
+                    <label for="risk">How would you describe your attitude to investment risk? *</label>
+                    <select id="risk" name="risk_attitude" required>
+                        <option value="">— Please select —</option>
+                        <option value="very-cautious">Very Cautious — I cannot tolerate any loss of capital</option>
+                        <option value="cautious">Cautious — I am willing to accept small fluctuations for modest growth</option>
+                        <option value="balanced">Balanced — I accept moderate risk for moderate growth</option>
+                        <option value="adventurous">Adventurous — I am comfortable with significant fluctuations for higher growth</option>
+                        <option value="very-adventurous">Very Adventurous — I accept the possibility of large losses for maximum growth potential</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="loss-reaction">If your investment fell by 20% in value over one year, what would you do?</label>
+                    <select id="loss-reaction" name="loss_reaction">
+                        <option value="">— Please select —</option>
+                        <option value="sell-all">Sell all investments immediately</option>
+                        <option value="sell-some">Sell some investments to reduce exposure</option>
+                        <option value="hold">Hold and wait for recovery</option>
+                        <option value="invest-more">Invest more to take advantage of lower prices</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Previous Investment Experience</label>
+                    <select id="experience" name="investment_experience">
+                        <option value="">— Please select —</option>
+                        <option value="none">None</option>
+                        <option value="limited">Limited — savings accounts, cash ISAs</option>
+                        <option value="some">Some — stocks & shares ISAs, pensions</option>
+                        <option value="experienced">Experienced — direct equities, funds</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section 5: Additional Information -->
+            <div class="bordered-box">
+                <h3>Section 5 — Additional Information</h3>
+                <br>
+                <div class="form-group">
+                    <label for="existing-products">Existing Financial Products (pensions, ISAs, policies etc.)</label>
+                    <textarea id="existing-products" name="existing_products" placeholder="Please list any existing investments, pensions or savings products you hold."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="concerns">Any particular concerns or preferences?</label>
+                    <textarea id="concerns" name="concerns" placeholder="e.g. ethical / ESG investing, specific sectors to avoid, liquidity requirements."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="health">Are there any health or personal circumstances we should be aware of?</label>
+                    <textarea id="health" name="health_circumstances" placeholder="This information is treated in strict confidence and may affect our recommendations."></textarea>
+                </div>
+            </div>
+
+            <!-- Declaration -->
+            <div class="bordered-box">
+                <h3>Declaration</h3>
+                <br>
+                <p style="font-size:0.95rem; color:#636262;">
+                    I confirm that the information provided in this questionnaire is accurate and complete to the best of my knowledge. I understand that Glasgow Financial Advice will use this information to prepare a personalised suitability report and product recommendation for my review.
+                </p>
+                <br>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="declaration" required style="width:auto; margin-right:0.5rem;">
+                        I confirm the above declaration *
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="privacy" required style="width:auto; margin-right:0.5rem;">
+                        I consent to my data being processed in accordance with Glasgow Financial Advice's privacy policy *
+                    </label>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:2rem;">
+                <button type="submit" class="btn">Submit Questionnaire</button>
+                <p class="form-note" style="margin-top:1rem;">
+                    Your submission is encrypted and handled in strict confidence. A member of our team will be in touch within two business days.
+                </p>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <div class="footer-firm">Glasgow Financial Advice</div>
+        <p>Financial Advice for Glasgow</p>
+        <p><a href="contact.html">Contact Us</a> &nbsp;|&nbsp; <a href="about.html">About</a></p>
+        <p class="footer-legal">
+            Glasgow Financial Advice is authorised and regulated by the Financial Conduct Authority.
+            The value of investments and the income from them can fall as well as rise and you may not get back the amount originally invested.
+        </p>
+    </footer>
+
+</body>
+</html>
