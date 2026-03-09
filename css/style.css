@@ -83,11 +83,10 @@ header {
 }
 
 .crest {
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: auto;
     margin: 0 auto 0.75rem;
     display: block;
-    filter: brightness(0) invert(1) opacity(0.9);
 }
 
 .firm-name {

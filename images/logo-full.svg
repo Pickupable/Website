@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" fill="none">
+  <!-- Candidate lines above, fading upward -->
+  <line x1="8" y1="9"  x2="152" y2="9"  stroke="#047D6D" stroke-width="1.5" stroke-linecap="round" opacity="0.15"/>
+  <line x1="8" y1="19" x2="152" y2="19" stroke="#047D6D" stroke-width="1.5" stroke-linecap="round" opacity="0.25"/>
+  <line x1="8" y1="29" x2="152" y2="29" stroke="#047D6D" stroke-width="1.5" stroke-linecap="round" opacity="0.38"/>
+  <line x1="8" y1="39" x2="152" y2="39" stroke="#047D6D" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <!-- The frontline -->
+  <line x1="8" y1="57" x2="152" y2="57" stroke="#047D6D" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="80" cy="57" r="8" fill="#047D6D"/>
+  <circle cx="80" cy="57" r="4" fill="white"/>
+  <!-- Wordmark -->
+  <text x="80" y="76" text-anchor="middle" dominant-baseline="middle"
+        font-family="Inter,-apple-system,BlinkMacSystemFont,sans-serif"
+        font-weight="700" font-size="14" fill="#047D6D" letter-spacing="3">FRONTLINE</text>
+  <text x="80" y="92" text-anchor="middle" dominant-baseline="middle"
+        font-family="Inter,-apple-system,BlinkMacSystemFont,sans-serif"
+        font-weight="300" font-size="9" fill="#608880" letter-spacing="4">FINANCIAL</text>
+</svg>
