@@ -1,7 +1,7 @@
 /* ============================================================
    Frontline Financial — Main Stylesheet
    Inspired by Obsidian.md design language
-   Dark: #0d0d17 | Purple: #6e44ff | Surface: #1a1a2e
+   Dark: #0d0d0f | Teal: #6aadaa | Surface: #131c1c
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -18,8 +18,8 @@ html {
 }
 
 body {
-    background-color: #0d0d17;
-    color: #c8c8d8;
+    background-color: #0d0d0f;
+    color: #c4d2d2;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 16px;
     line-height: 1.7;
@@ -28,7 +28,7 @@ body {
 
 /* --- Typography --- */
 h1, h2, h3, h4 {
-    color: #e8e8f4;
+    color: #e8f2f2;
     font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 1.25;
@@ -38,20 +38,20 @@ h1 { font-size: 2.8rem; font-weight: 700; }
 h2 { font-size: 1.9rem; margin-bottom: 0.75rem; }
 h3 { font-size: 1.25rem; margin-bottom: 0.6rem; font-weight: 600; }
 
-p { margin-bottom: 1.1rem; color: #a0a0b8; }
+p { margin-bottom: 1.1rem; color: #9ab2b2; }
 
 a {
-    color: #a78bfa;
+    color: #90c4c0;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-a:hover { color: #c4b5fd; }
+a:hover { color: #b0d8d5; }
 
 /* --- Ornamental Divider --- */
 .ornament {
     text-align: center;
-    color: #6e44ff;
+    color: #6aadaa;
     font-size: 1.1rem;
     letter-spacing: 0.3em;
     margin: 1.2rem 0;
@@ -61,15 +61,15 @@ a:hover { color: #c4b5fd; }
 
 .rule {
     border: none;
-    border-top: 1px solid rgba(110, 68, 255, 0.3);
+    border-top: 1px solid rgba(106, 173, 170, 0.3);
     width: 60%;
     margin: 0.5rem auto;
 }
 
 /* --- Header / Navigation --- */
 header {
-    background-color: rgba(13, 13, 23, 0.95);
-    border-bottom: 1px solid rgba(110, 68, 255, 0.2);
+    background-color: rgba(13, 13, 15, 0.95);
+    border-bottom: 1px solid rgba(106, 173, 170, 0.2);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -94,21 +94,21 @@ header {
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
-    color: #e8e8f4;
+    color: #e8f2f2;
     letter-spacing: -0.01em;
 }
 
 .strapline {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    color: #7c5cbf;
+    color: #5a9e9b;
     font-size: 0.9rem;
     letter-spacing: 0.04em;
     margin-top: 0.2rem;
 }
 
 nav {
-    border-top: 1px solid rgba(110, 68, 255, 0.15);
+    border-top: 1px solid rgba(106, 173, 170, 0.15);
 }
 
 nav ul {
@@ -122,7 +122,7 @@ nav ul {
 
 nav ul li a {
     display: block;
-    color: #a0a0b8;
+    color: #9ab2b2;
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
@@ -134,8 +134,8 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #a78bfa;
-    background-color: rgba(110, 68, 255, 0.08);
+    color: #90c4c0;
+    background-color: rgba(106, 173, 170, 0.08);
 }
 
 /* --- Hero Section --- */
@@ -144,7 +144,7 @@ nav ul li a.active {
     padding: 6rem 2rem;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(160deg, #0d0d17 0%, #14102b 40%, #1a0d35 70%, #0d0d17 100%);
+    background: linear-gradient(160deg, #0d0d0f 0%, #0d1919 40%, #0d2020 70%, #0d0d0f 100%);
 }
 
 .hero::before {
@@ -155,7 +155,7 @@ nav ul li a.active {
     transform: translateX(-50%);
     width: 800px;
     height: 600px;
-    background: radial-gradient(ellipse at center, rgba(110, 68, 255, 0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(106, 173, 170, 0.12) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -164,27 +164,27 @@ nav ul li a.active {
     position: absolute;
     inset: 0;
     background-image:
-        radial-gradient(circle at 20% 80%, rgba(110, 68, 255, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.06) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(106, 173, 170, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(133, 192, 188, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
 .hero h1 {
-    color: #e8e8f4;
+    color: #e8f2f2;
     font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 1.2rem;
     position: relative;
     z-index: 1;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, #e8e8f4 0%, #a78bfa 100%);
+    background: linear-gradient(135deg, #e8f2f2 0%, #90c4c0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .hero p {
-    color: #8080a0;
+    color: #708e8e;
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto 2.5rem;
@@ -195,26 +195,26 @@ nav ul li a.active {
 
 .btn {
     display: inline-block;
-    background: linear-gradient(135deg, #6e44ff 0%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #5a9e9b 0%, #6aadaa 100%);
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     padding: 0.75rem 2rem;
-    border: 1px solid rgba(110, 68, 255, 0.5);
+    border: 1px solid rgba(106, 173, 170, 0.5);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
     z-index: 1;
-    box-shadow: 0 0 20px rgba(110, 68, 255, 0.25);
+    box-shadow: 0 0 20px rgba(106, 173, 170, 0.2);
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #7c5cf6 0%, #9d70f8 100%);
+    background: linear-gradient(135deg, #6aadaa 0%, #7dbdba 100%);
     color: #ffffff;
-    box-shadow: 0 0 30px rgba(110, 68, 255, 0.45);
+    box-shadow: 0 0 30px rgba(106, 173, 170, 0.38);
     transform: translateY(-1px);
 }
 
@@ -232,7 +232,7 @@ main {
 .section-title {
     text-align: center;
     margin-bottom: 0.5rem;
-    color: #e8e8f4;
+    color: #e8f2f2;
 }
 
 /* --- Card Grid --- */
@@ -244,8 +244,8 @@ main {
 }
 
 .card {
-    background: linear-gradient(135deg, #16162a 0%, #1a1a30 100%);
-    border: 1px solid rgba(110, 68, 255, 0.2);
+    background: linear-gradient(135deg, #131c1c 0%, #161f1f 100%);
+    border: 1px solid rgba(106, 173, 170, 0.2);
     border-radius: 12px;
     padding: 2rem;
     text-align: left;
@@ -261,24 +261,24 @@ main {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(110, 68, 255, 0.6), transparent);
+    background: linear-gradient(90deg, transparent, rgba(106, 173, 170, 0.55), transparent);
 }
 
 .card:hover {
-    border-color: rgba(110, 68, 255, 0.5);
-    box-shadow: 0 8px 40px rgba(110, 68, 255, 0.15);
+    border-color: rgba(106, 173, 170, 0.45);
+    box-shadow: 0 8px 40px rgba(106, 173, 170, 0.12);
     transform: translateY(-2px);
 }
 
 .card h3 {
-    color: #e8e8f4;
+    color: #e8f2f2;
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
 }
 
 .card p {
     font-size: 0.92rem;
-    color: #7878a0;
+    color: #708e8e;
     line-height: 1.65;
 }
 
@@ -289,8 +289,8 @@ main {
 
 /* --- Decorative border box --- */
 .bordered-box {
-    background: linear-gradient(135deg, #13132a 0%, #161628 100%);
-    border: 1px solid rgba(110, 68, 255, 0.25);
+    background: linear-gradient(135deg, #121919 0%, #141c1c 100%);
+    border: 1px solid rgba(106, 173, 170, 0.22);
     border-radius: 12px;
     padding: 2.5rem;
     margin: 2rem 0;
@@ -305,7 +305,7 @@ main {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(110, 68, 255, 0.5), transparent);
+    background: linear-gradient(90deg, transparent, rgba(106, 173, 170, 0.45), transparent);
 }
 
 .bordered-box::after {
@@ -315,7 +315,7 @@ main {
     right: -60px;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(110, 68, 255, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(106, 173, 170, 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -325,7 +325,7 @@ main {
 }
 
 .bordered-box h3 {
-    color: #e8e8f4;
+    color: #e8f2f2;
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
@@ -341,7 +341,7 @@ main {
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
-    color: #a0a0c0;
+    color: #98b2b2;
     margin-bottom: 0.4rem;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -352,12 +352,12 @@ main {
 .form-group textarea {
     width: 100%;
     padding: 0.7rem 1rem;
-    background-color: #16162a;
-    border: 1px solid rgba(110, 68, 255, 0.2);
+    background-color: #131c1c;
+    border: 1px solid rgba(106, 173, 170, 0.2);
     border-radius: 8px;
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
-    color: #e8e8f4;
+    color: #e8f2f2;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -365,46 +365,46 @@ main {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: rgba(110, 68, 255, 0.6);
-    box-shadow: 0 0 0 3px rgba(110, 68, 255, 0.12);
+    border-color: rgba(106, 173, 170, 0.6);
+    box-shadow: 0 0 0 3px rgba(106, 173, 170, 0.1);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #4a4a6a;
+    color: #3d5c5c;
 }
 
 .form-group select option {
-    background-color: #16162a;
+    background-color: #131c1c;
 }
 
 .form-group textarea { resize: vertical; min-height: 100px; }
 
 .form-note {
     font-size: 0.8rem;
-    color: #5a5a7a;
+    color: #4a6868;
     margin-top: 0.3rem;
 }
 
 /* --- Footer --- */
 footer {
-    background-color: #0a0a14;
-    border-top: 1px solid rgba(110, 68, 255, 0.15);
-    color: #5a5a7a;
+    background-color: #080f0f;
+    border-top: 1px solid rgba(106, 173, 170, 0.12);
+    color: #4a6868;
     text-align: center;
     padding: 2.5rem 1rem;
     font-size: 0.85rem;
 }
 
-footer p { color: #5a5a7a; margin-bottom: 0.5rem; }
+footer p { color: #4a6868; margin-bottom: 0.5rem; }
 
-footer a { color: #7c5cbf; }
-footer a:hover { color: #a78bfa; }
+footer a { color: #5a9e9b; }
+footer a:hover { color: #90c4c0; }
 
 .footer-firm {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    color: #a0a0c0;
+    color: #98b2b2;
     font-size: 1rem;
     margin-bottom: 0.5rem;
     letter-spacing: 0.02em;
@@ -413,7 +413,7 @@ footer a:hover { color: #a78bfa; }
 .footer-legal {
     margin-top: 1.5rem;
     font-size: 0.75rem;
-    color: #3a3a5a;
+    color: #2e4848;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
